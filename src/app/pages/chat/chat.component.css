@@ -1,0 +1,16 @@
+/* Chat component relies mostly on global Husky AI styles.
+   These tweaks just ensure the scroll area behaves nicely in Angular. */
+
+.chat-wrapper {
+  max-height: 80vh;
+}
+
+.chat-scroll {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.chat-message .chat-bubble {
+  max-width: 75%;
+  word-wrap: break-word;
+}
