@@ -1,0 +1,17 @@
+main.section {
+  min-height: calc(100vh - 56px - 56px);
+}
+
+
+/* Husky red gradient toast for faculty created */
+.toast.bg-danger {
+  background: linear-gradient(135deg, #7f0000, #c30000, #ff1744);
+}
+
+.toast.bg-danger .toast-body {
+  font-size: 0.9rem;
+}
+
+.toast.bg-danger .btn-close-white {
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}

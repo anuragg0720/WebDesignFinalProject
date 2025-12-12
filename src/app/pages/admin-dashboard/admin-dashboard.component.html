@@ -1,0 +1,146 @@
+<header class="py-3 border-bottom bg-body-tertiary">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="h4 mb-0 text-dark">
+      <i class="bi bi-speedometer2 me-2"></i>
+      Admin Dashboard
+    </h1>
+    <span class="badge text-bg-danger">Admin</span>
+  </div>
+</header>
+
+<main class="section py-4">
+  <div class="container d-flex flex-column gap-4">
+
+    <!-- User & faculty management -->
+    <div class="card shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">Users & faculty management</span>
+        <button class="btn btn-sm btn-outline-secondary" (click)="loadUsers()">
+          Refresh users
+        </button>
+      </div>
+      <div class="card-body">
+        <div *ngIf="usersError" class="alert alert-danger mb-3">
+          {{ usersError }}
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="h6">All users</h2>
+            <div *ngIf="loadingUsers" class="text-secondary small mb-2">
+              Loading users…
+            </div>
+
+            <div class="table-responsive" *ngIf="users.length">
+              <table class="table table-sm align-middle">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let u of users">
+                    <td>{{ u.displayName || (u.firstName + ' ' + u.lastName) }}</td>
+                    <td>{{ u.email }}</td>
+                    <td>
+                      <span class="badge text-bg-light text-capitalize">
+                        {{ u.role }}
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p *ngIf="!loadingUsers && !users.length" class="text-secondary mb-0">
+              No users found.
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <h2 class="h6">Add faculty</h2>
+
+            <div *ngIf="facultyError" class="alert alert-danger py-1 px-2 small">
+              {{ facultyError }}
+            </div>
+            <div *ngIf="facultySuccess" class="alert alert-success py-1 px-2 small">
+              {{ facultySuccess }}
+            </div>
+
+            <form (ngSubmit)="createFaculty()" class="d-flex flex-column gap-2">
+              <div>
+                <label class="form-label small">First name</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  [(ngModel)]="newFaculty.firstName"
+                  name="facultyFirstName"
+                  required
+                />
+              </div>
+              <div>
+                <label class="form-label small">Last name</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  [(ngModel)]="newFaculty.lastName"
+                  name="facultyLastName"
+                  required
+                />
+              </div>
+              <div>
+                <label class="form-label small">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  [(ngModel)]="newFaculty.email"
+                  name="facultyEmail"
+                  required
+                />
+              </div>
+              <div>
+                <label class="form-label small">Password</label>
+                <input
+                  type="password"
+                  class="form-control form-control-sm"
+                  [(ngModel)]="newFaculty.password"
+                  name="facultyPassword"
+                  required
+                />
+              </div>
+
+              <button
+                class="btn btn-sm mt-1"
+                type="submit"
+                [disabled]="creatingFaculty"
+                [ngClass]="facultySuccess ? 'btn-success' : 'btn-primary'"
+              >
+                <!-- While API call is in progress -->
+                <span *ngIf="creatingFaculty">
+                  <span
+                    class="spinner-border spinner-border-sm me-1"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Creating…
+                </span>
+
+                <!-- Normal state before success -->
+                <span *ngIf="!creatingFaculty && !facultySuccess">
+                  Create faculty
+                </span>
+
+                <!-- After successful creation -->
+                <span *ngIf="!creatingFaculty && facultySuccess">
+                  Created
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
