@@ -1,0 +1,145 @@
+[
+  {
+    "id": "support-customer-service",
+    "category": "support",
+    "question": "How do I contact Northeastern customer service?",
+    "answer": "You can reach Northeastern customer service through the primary support portal, which lets you submit requests and browse common help topics for students, faculty, and staff.",
+    "links": [
+      "https://pref.northeastern.edu/customer-service/"
+    ],
+    "tags": [
+      "support",
+      "help",
+      "customer service",
+      "contact",
+      "questions"
+    ]
+  },
+  {
+    "id": "graduate-programs",
+    "category": "admissions",
+    "question": "Where do I find information about graduate programs at Northeastern?",
+    "answer": "Northeastern Graduate Programs provides details on master\u2019s and doctoral degrees, application requirements, deadlines, and campus options for prospective graduate students.",
+    "links": [
+      "https://graduate.northeastern.edu/"
+    ],
+    "tags": [
+      "graduate",
+      "masters",
+      "phd",
+      "programs",
+      "admissions"
+    ]
+  },
+  {
+    "id": "undergraduate-admissions",
+    "category": "admissions",
+    "question": "Where is the main undergraduate admissions site?",
+    "answer": "The undergraduate admissions site covers first\u2011year and transfer applications, deadlines, decisions, and visit options for students interested in Northeastern\u2019s bachelor\u2019s degrees.",
+    "links": [
+      "https://admissions.northeastern.edu/"
+    ],
+    "tags": [
+      "undergraduate",
+      "bachelor",
+      "admissions",
+      "apply",
+      "first year",
+      "transfer"
+    ]
+  },
+  {
+    "id": "student-hub",
+    "category": "student-life",
+    "question": "What is the Student Hub at Northeastern?",
+    "answer": "The Student Hub is the central online home for students, bringing together class information, resources, and key tools like email, calendars, and links to university services.",
+    "links": [
+      "https://about.me.northeastern.edu/"
+    ],
+    "tags": [
+      "student hub",
+      "portal",
+      "resources",
+      "homepage"
+    ]
+  },
+  {
+    "id": "campus-planning-real-estate",
+    "category": "campus",
+    "question": "Where can I read about campus planning and real estate projects?",
+    "answer": "Campus Planning and Real Estate shares information about facilities, construction projects, and how Northeastern designs and manages its physical campus across locations.",
+    "links": [
+      "https://pref.northeastern.edu/campus-planning/"
+    ],
+    "tags": [
+      "campus planning",
+      "real estate",
+      "facilities",
+      "buildings",
+      "projects"
+    ]
+  },
+  {
+    "id": "campus-map",
+    "category": "campus",
+    "question": "Where can I view Northeastern\u2019s campus map?",
+    "answer": "Northeastern\u2019s interactive campus map lets you search for buildings, classrooms, housing, dining, parking, and key services on and around campus.",
+    "links": [
+      "https://experience.arcgis.com/experience/b24181de18b74d20a369865de2a44ef3"
+    ],
+    "tags": [
+      "map",
+      "directions",
+      "buildings",
+      "locations",
+      "campus"
+    ]
+  },
+  {
+    "id": "colleges-and-schools",
+    "category": "academics",
+    "question": "Where can I see all colleges and schools at Northeastern?",
+    "answer": "The colleges and schools overview page lists Northeastern\u2019s academic units and links to each college, so you can explore programs, departments, and academic focus areas.",
+    "links": [
+      "https://www.northeastern.edu/academics/colleges-and-schools/"
+    ],
+    "tags": [
+      "colleges",
+      "schools",
+      "academics",
+      "programs"
+    ]
+  },
+  {
+    "id": "human-resources",
+    "category": "employment",
+    "question": "Where is the Human Resources site for Northeastern employees?",
+    "answer": "The Human Resources portal provides information for employees on benefits, policies, careers, and workplace resources across Northeastern\u2019s global university system.",
+    "links": [
+      "https://hr.northeastern.edu/"
+    ],
+    "tags": [
+      "hr",
+      "human resources",
+      "jobs",
+      "benefits",
+      "employment"
+    ]
+  },
+  {
+    "id": "husky-card",
+    "category": "student-services",
+    "question": "Where can I find information about Husky Card services?",
+    "answer": "Husky Card Services explains how to submit a photo, pick up your card, replace a lost card, and use it for building access, dining, and other services.",
+    "links": [
+      "https://huskycard.northeastern.edu/"
+    ],
+    "tags": [
+      "husky card",
+      "id card",
+      "photo",
+      "replacement",
+      "access"
+    ]
+  }
+]

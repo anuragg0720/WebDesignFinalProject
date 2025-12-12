@@ -1,0 +1,187 @@
+<main class="signup-shell">
+  <div class="container py-5 d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-sm rounded-4 signup-card overflow-hidden">
+      <div class="row g-0">
+        <div class="col-lg-6 p-4">
+          <a routerLink="/login" class="text-decoration-none small">
+            <i class="bi bi-arrow-left"></i> Back to login
+          </a>
+
+          <h1 class="h3 fw-bold mt-3 mb-2">
+            <i class="bi bi-person-plus me-2"></i>
+            Student sign up
+          </h1>
+          <p class="text-secondary small mb-3">
+            Create your Husky AI student account. You can edit your profile later.
+          </p>
+
+          <div *ngIf="error" class="alert alert-danger py-2 small" role="alert">
+            {{ error }}
+          </div>
+
+          <form (ngSubmit)="submit(signupForm)" #signupForm="ngForm" novalidate>
+            <div class="row">
+              <div class="col-sm-6 mb-3">
+                <label class="form-label small" for="firstName">First name *</label>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  class="form-control"
+                  [(ngModel)]="model.firstName"
+                  pattern="^[A-Za-z\s'-]+$"
+                  #firstNameRef="ngModel"
+                  required
+                />
+                <div
+                  class="text-danger small mt-1"
+                  *ngIf="firstNameRef.invalid && firstNameRef.touched"
+                >
+                  First name should contain only letters.
+                </div>
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label class="form-label small" for="lastName">Last name *</label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  class="form-control"
+                  [(ngModel)]="model.lastName"
+                  pattern="^[A-Za-z\s'-]+$"
+                  #lastNameRef="ngModel"
+                  required
+                />
+                <div
+                  class="text-danger small mt-1"
+                  *ngIf="lastNameRef.invalid && lastNameRef.touched"
+                >
+                  Last name should contain only letters.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small" for="email">Northeastern email *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+                [(ngModel)]="model.email"
+                placeholder="student@northeastern.edu"
+                pattern="^[a-zA-Z0-9._%+-]+@northeastern\.edu$"
+                #emailRef="ngModel"
+                required
+              />
+              <div
+                class="text-danger small mt-1"
+                *ngIf="emailRef.invalid && emailRef.touched"
+              >
+                Please enter a valid @northeastern.edu email address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small" for="password">Password *</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+                [(ngModel)]="model.password"
+                minlength="8"
+                #passwordRef="ngModel"
+                required
+              />
+              <div class="form-text small">
+                At least 8 characters, mix of letters and numbers recommended.
+              </div>
+              <div
+                class="text-danger small mt-1"
+                *ngIf="passwordRef.invalid && passwordRef.touched"
+              >
+                Password must be at least 8 characters long.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small" for="phone">Contact number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="form-control"
+                [(ngModel)]="model.phone"
+                placeholder="10-digit contact number"
+                pattern="^[0-9]{10}$"
+                minlength="10"
+                maxlength="10"
+                #phoneRef="ngModel"
+              />
+              <div
+                class="text-danger small mt-1"
+                *ngIf="phoneRef.invalid && phoneRef.touched && model.phone"
+              >
+                Contact number must be a 10-digit number.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 mb-3">
+                <label class="form-label small" for="courseEnrolled">Course enrolled</label>
+                <input
+                  id="courseEnrolled"
+                  name="courseEnrolled"
+                  class="form-control"
+                  [(ngModel)]="model.courseEnrolled"
+                  placeholder="e.g., MS in Information Systems"
+                />
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label class="form-label small" for="intake">Intake term</label>
+                <input
+                  id="intake"
+                  name="intake"
+                  class="form-control"
+                  [(ngModel)]="model.intake"
+                  placeholder="e.g., Spring 2026"
+                />
+              </div>
+            </div>
+
+            <div class="d-grid mt-3">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="loading || signupForm.invalid"
+              >
+                <span *ngIf="!loading">Create account</span>
+                <span *ngIf="loading">
+                  <span
+                    class="spinner-border spinner-border-sm me-2"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Creating account…
+                </span>
+              </button>
+            </div>
+
+            <p class="small text-secondary mt-3 mb-0">
+              Already have an account?
+              <a routerLink="/login">Sign in</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="col-lg-6 signup-info-column p-4 d-flex flex-column justify-content-center">
+          <h2 class="h5 fw-semibold mb-3">Why create a Husky AI profile?</h2>
+          <ul class="small mb-0 ps-3">
+            <li>Get faster, more tailored answers about your program and campus.</li>
+            <li>Let faculty see key details like intake and course for better support.</li>
+            <li>Keep your information in one place for future features.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
