@@ -1,0 +1,44 @@
+.signup-shell {
+  background: radial-gradient(circle at top, #330000, #990000 40%, #000000 100%);
+}
+
+.signup-card {
+  max-width: 960px;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .signup-card {
+    border-radius: 0.75rem;
+  }
+}
+
+
+.signup-info-column {
+  background-image: url('/assets/img/huskyportrait.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.signup-info-column::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.65), rgba(153,0,0,0.75));
+}
+
+.signup-info-column > * {
+  position: relative;
+  z-index: 1;
+}
+
+.signup-info-column h2 {
+  color: #ffffff;
+}
+
+.signup-info-column ul {
+  color: #f1f5f9;
+}
