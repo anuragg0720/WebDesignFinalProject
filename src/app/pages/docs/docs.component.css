@@ -1,0 +1,16 @@
+.docs-shell {
+  min-height: calc(100vh - 56px);
+}
+
+.docs-frame-wrapper {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.5rem 1rem rgba(15, 23, 42, 0.08);
+}
+
+.docs-frame {
+  width: 100%;
+  min-height: 70vh;
+  border: none;
+}
