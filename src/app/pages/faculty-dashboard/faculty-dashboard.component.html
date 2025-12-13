@@ -1,0 +1,57 @@
+<header class="py-3 border-bottom bg-body-tertiary">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="h4 mb-0 text-dark">
+      <i class="bi bi-mortarboard-fill me-2"></i>
+      Faculty Dashboard
+    </h1>
+    <span class="badge text-bg-primary">Faculty</span>
+  </div>
+</header>
+
+<main class="section py-4">
+  <div class="container">
+    <div class="card shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">Enrolled Students</span>
+        <button class="btn btn-sm btn-outline-secondary" (click)="loadStudents()">
+          Refresh
+        </button>
+      </div>
+      <div class="card-body">
+        <div *ngIf="loading" class="text-secondary small mb-2">
+          Loading students…
+        </div>
+        <div *ngIf="error" class="alert alert-danger">
+          {{ error }}
+        </div>
+
+        <div class="table-responsive" *ngIf="students.length">
+          <table class="table table-sm align-middle">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Intake</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of students">
+                <td>{{ s.firstName }} {{ s.lastName }}</td>
+                <td>{{ s.email }}</td>
+                <td>{{ s.courseEnrolled || '—' }}</td>
+                <td>{{ s.intake || '—' }}</td>
+                <td>{{ s.phone || '—' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p *ngIf="!loading && !students.length" class="text-secondary mb-0">
+          No students found yet.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
