@@ -1,0 +1,48 @@
+.login-shell {
+  background: radial-gradient(circle at top, #330000, #990000 40%, #000000 100%);
+  min-height: 100vh;
+}
+
+/* Adjusted: move form slightly DOWN */
+.login-shell .min-vh-100 {
+  min-height: 72vh !important;           /* slightly taller → lowers card */
+  align-items: flex-start !important;
+  padding-top: 4.2rem;                   /* increased from 3rem → moves form downward */
+}
+
+/* Adjusted: add a little more spacing below logo */
+.husky-logo-hero {
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;                 /* increased from 0.75rem */
+}
+
+.login-card {
+  max-width: 960px;
+  width: 100%;
+}
+
+.bg-husky {
+  background: linear-gradient(145deg, #990000, #cc0000);
+}
+
+.brand {
+  color: #990000;
+}
+
+@media (max-width: 767.98px) {
+  .login-card {
+    border-radius: 0.75rem;
+  }
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.husky-logo-hero .husky-logo-img {
+  max-height: 120px;
+  width: auto;
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.4));
+}
