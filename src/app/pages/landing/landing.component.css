@@ -1,0 +1,62 @@
+.landing {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-cta .primary {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: #990000;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.content-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.content-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  margin-right: 0.3rem;
+  background: #eee;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  color: #777;
+}
