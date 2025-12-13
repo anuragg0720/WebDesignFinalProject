@@ -1,0 +1,211 @@
+/* ============================= DEEPA: GLOBAL STYLES & VARIABLES ============================= */
+
+html { scroll-behavior: smooth; }
+
+:root {
+  --brand-red: #cc0000;
+  --brand-red-600: #a30000;
+  --ink: #f1f5f9;
+  --muted: #cbd5e1;
+
+  --hero-height: clamp(360px, 45vh, 460px);
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(204,0,0,0.25), transparent 60%),
+    linear-gradient(135deg, #000000 0%, #4d0000 45%, #7a0000 100%);
+  color: var(--ink);
+}
+
+.section       { padding: 3.5rem 0; }
+.section-muted { background: #ffffff; color: #1f2937; }
+
+    /* ============================= Anurag: NAVBAR,OFFCANVAS ============================= */
+
+.hero-husky {
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(204, 0, 0, 0.25), transparent 60%),
+    linear-gradient(135deg, #000000 0%, #4d0000 45%, #7a0000 100%);
+  color: #fff;
+}
+
+
+.hero-husky .btn-light { color: #111; }
+
+.navbar.bg-body-tertiary,
+.navbar {
+  background-color: #000 !important;
+  border-color: rgba(255,255,255,.08) !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-text { color: #fff !important; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus { color: #ffe5e5 !important; }
+.navbar .navbar-toggler { border-color: rgba(255,255,255,.25); }
+.navbar .navbar-toggler-icon { filter: invert(1) grayscale(100%); }
+
+.offcanvas,
+.offcanvas .offcanvas-header { background:#000; color:#fff; }
+.offcanvas .list-group-item {
+  background:#000; color:#fff; border-color: rgba(255,255,255,.08);
+}
+.offcanvas .list-group-item:hover { background:#0f0f0f; }
+
+.card {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--brand-red-600);
+  border-color: var(--brand-red-600);
+}
+
+.progress { background: rgba(255,255,255,.15); }
+.progress .progress-bar { background: var(--brand-red); color:#fff; }
+
+.nav-tabs .nav-link { color:#e2e8f0; }
+.nav-tabs .nav-link.active { color:#111; background:#fff; border-color:#dee2e6 #dee2e6 #fff; }
+
+.badge-beta { background: rgba(204, 0, 0, 0.12); color: #7a0000; }
+
+:focus-visible {
+  outline: 3px solid rgba(204, 0, 0, 0.6);
+  outline-offset: 2px;
+}
+
+footer { background:#000; color:#e2e8f0; }
+footer .text-secondary { color: var(--muted) !important; }
+
+.tooltip-inner { background:#111; color:#fff; }
+.tooltip .tooltip-arrow::before { border-top-color:#111; }
+
+.chat-wrapper { min-height: 60vh; }
+.chat-scroll { height: 60vh; overflow: auto; }
+.message-bubble { max-width: 75%; padding: .6rem .8rem; border-radius: 1rem; }
+.message-bubble.user { background: #ffe5e5; color:#111; }
+.message-bubble.bot  { background: #f3f4f6; color:#111; }
+@media (max-width: 576px){ .message-bubble{ max-width: 95%; } }
+
+/* ============================= Isha: HERO & CAROUSEL STYLES ============================= */
+
+#hero .carousel,
+#hero .carousel-inner {
+  height: var(--hero-height);
+  border-radius: 0 !important;  
+  overflow: hidden;
+  background: transparent;
+}
+
+#hero .carousel-item { height: 100%; }
+
+#hero .carousel-item.p-5 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+#hero .carousel-item.hero-img { padding: 0 !important; }
+
+#hero .carousel-item.hero-img.active,
+#hero .carousel-item.hero-img.carousel-item-next,
+#hero .carousel-item.hero-img.carousel-item-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item.hero-img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+}
+
+.carousel-item.hero-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0,0,0,.55), rgba(0,0,0,.35));
+}
+
+.carousel-item.hero-img > .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  :root { --hero-height: 340px; }
+}
+
+/* ============================= Ananya: LOGIN PAGE STYLES ============================= */
+.login-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(204,0,0,0.25), transparent 60%),
+    linear-gradient(135deg, #000 0%, #4d0000 45%, #7a0000 100%);
+}
+
+.form-signin {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;          
+  justify-content: center;      
+  padding: 1rem;
+}
+
+.form-signin .card {
+  width: min(980px, 95vw);
+  margin: 0 auto;
+}
+
+
+.login-footer {
+  flex: 0 0 auto;
+  background: #000;
+  color: #e2e8f0;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.login-footer .text-secondary { color: #cbd5e1 !important; }
+
+.login-aside {
+  position: relative;
+  min-height: 260px;
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    var(--login-aside-image, url('../img/huskyportrait.webp')); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.login-aside .aside-content { position: relative; z-index: 1; }
+.login-aside .text-aside { color: #e5e7eb; }
+.login-aside .list-aside .list-group-item {
+  background: rgba(255,255,255,.10);
+  color: #fff;
+  border-color: rgba(255,255,255,.18);
+}
+.login-aside .list-aside .bi-check-circle { color: #86efac; }
+
+@media (max-width: 575.98px) {
+  .login-aside { min-height: 200px; }
+}
+
+
+
