@@ -1,0 +1,616 @@
+<!-- HERO -->
+<section id="hero" class="hero-husky py-5">
+  <div class="container">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <!-- ====================== Ananya's Part: Carousel Slides + Hero Buttons ====================== -->
+      <div class="carousel-inner rounded-4 shadow-sm">
+        <div class="carousel-item active p-5 text-center text-light">
+          <h1 class="display-5 fw-bold">HUSKY AI — your campus assistant</h1>
+          <p class="lead col-lg-8 mx-auto">
+            Get quick answers about advising, the academic calendar, Husky Card,
+            billing, IT help, and more — 24/7.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a routerLink="/chat" class="btn btn-light btn-lg px-4 gap-3">
+              <i class="bi bi-chat-dots me-1"></i>Open HUSKY AI
+            </a>
+            <a href="#features" class="btn btn-outline-light btn-lg px-4">
+              <i class="bi bi-rocket me-1"></i>See what it can do
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="carousel-item p-5 text-center text-light hero-img"
+          style="background-image: url('assets/img/background3.webp')"
+        >
+          <div class="hero-content">
+            <h2 class="fw-semibold">Built with Bootstrap</h2>
+            <p class="lead">
+              Responsive, accessible, and easy to customize for Northeastern
+              students.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="carousel-item p-5 text-center text-light hero-img"
+          style="background-image: url('assets/img/background1.webp')"
+        >
+          <div class="hero-content">
+            <h2 class="fw-semibold">Fast &amp; helpful</h2>
+            <p class="lead">
+              Concise answers with links to official NU pages for verification.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Deepa's Part: About Section + Features Cards + Coverage Sample ====================== -->
+<section id="about" class="section section-muted">
+  <div class="container">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-7">
+        <h2 class="fw-bold">About HUSKY AI</h2>
+        <p class="text-secondary">
+          HUSKY AI is a student-built assistant for Northeastern University. It
+          summarizes official pages and points you to the right place to act. No
+          payments here — just fast answers and helpful links.
+        </p>
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+          <i class="bi bi-info-circle me-2"></i>
+          <div>
+            <strong>How it works:</strong> We look up a compact knowledge base
+            of NU FAQs → answer concisely → include source links. If something’s
+            missing, we say so and point you to the right office.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="list-group shadow-sm">
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            Academic Calendar <span class="bi bi-arrow-up-right"></span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            Advising Portal <span class="bi bi-arrow-up-right"></span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            Husky Card Services <span class="bi bi-arrow-up-right"></span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            Student Financial Services
+            <span class="bi bi-arrow-up-right"></span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            IT Service Desk <span class="bi bi-arrow-up-right"></span>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          >
+            Registrar &amp; Transcripts
+            <span class="bi bi-arrow-up-right"></span>
+          </a>
+        </div>
+        <small class="text-secondary d-block mt-2">
+          Links open official Northeastern pages.
+        </small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col">
+        <h2 class="fw-bold">What HUSKY AI can help with</h2>
+        <p class="text-secondary">
+          Top student tasks — fast answers and source links.
+        </p>
+      </div>
+      <div class="col-auto">
+        <ul class="nav nav-tabs" id="learnTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="tab-overview"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-overview"
+              type="button"
+              role="tab"
+              aria-controls="pane-overview"
+              aria-selected="true"
+            >
+              Overview
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="tab-links"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-links"
+              type="button"
+              role="tab"
+              aria-controls="pane-links"
+              aria-selected="false"
+            >
+              Quick links
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="tab-how"
+              data-bs-toggle="tab"
+              data-bs-target="#pane-how"
+              type="button"
+              role="tab"
+              aria-controls="pane-how"
+              aria-selected="false"
+            >
+              How it works
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i
+                class="bi bi-calendar-event fs-2 me-2"
+                data-bs-toggle="tooltip"
+                data-bs-title="Key dates & deadlines"
+              ></i>
+              <h5 class="card-title mb-0">Academic calendar</h5>
+            </div>
+            <p class="card-text">
+              Add/drop, holidays, exams — summarized with links.
+            </p>
+            <a href="#about" class="btn btn-outline-primary btn-sm">View links</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i
+                class="bi bi-person-gear fs-2 me-2"
+                data-bs-toggle="tooltip"
+                data-bs-title="Advising basics"
+              ></i>
+              <h5 class="card-title mb-0">Advising</h5>
+            </div>
+            <p class="card-text">
+              How to book, prepare, and follow up on appointments.
+            </p>
+            <a href="#about" class="btn btn-outline-primary btn-sm">View links</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i
+                class="bi bi-credit-card-2-front fs-2 me-2"
+                data-bs-toggle="tooltip"
+                data-bs-title="Husky Card help"
+              ></i>
+              <h5 class="card-title mb-0">Husky Card</h5>
+            </div>
+            <p class="card-text">
+              Photo, pickup, replacement, and office location.
+            </p>
+            <a href="#about" class="btn btn-outline-primary btn-sm">View links</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="learn" class="tab-content mt-4">
+      <div
+        class="tab-pane fade show active"
+        id="pane-overview"
+        role="tabpanel"
+        aria-labelledby="tab-overview"
+      >
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+          <i class="bi bi-info-circle me-2"></i>
+          <div>
+            HUSKY AI answers common questions for students and includes links to
+            official NU pages so you can verify details.
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pane-links"
+        role="tabpanel"
+        aria-labelledby="tab-links"
+      >
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            Academic Calendar
+            <span class="badge text-bg-secondary rounded-pill">Official</span>
+          </li>
+          <li class="list-group-item">Advising Portal</li>
+          <li class="list-group-item">Student Financial Services</li>
+          <li class="list-group-item">Husky Card Services</li>
+          <li class="list-group-item">IT Service Desk</li>
+          <li class="list-group-item">Registrar &amp; Transcripts</li>
+        </ul>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pane-how"
+        role="tabpanel"
+        aria-labelledby="tab-how"
+      >
+        <div class="row g-3">
+          <div class="col-md">
+            <div class="card h-100 border-primary">
+              <div class="card-body">
+                <h5 class="card-title">1) Ask</h5>
+                <p class="card-text">
+                  Type your question in plain English (e.g., “When is add/drop?”).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card h-100 border-success">
+              <div class="card-body">
+                <h5 class="card-title">2) See sources</h5>
+                <p class="card-text">
+                  We summarize official pages and include a link to verify.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card h-100 border-warning">
+              <div class="card-body">
+                <h5 class="card-title">3) Act</h5>
+                <p class="card-text">
+                  Book, download, or contact the right office immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h3 class="fw-semibold">Coverage sample</h3>
+      <div class="mb-2 small text-secondary">Calendar FAQs</div>
+      <div
+        class="progress mb-3"
+        role="progressbar"
+        aria-label="Calendar coverage"
+        aria-valuenow="80"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 80%">80%</div>
+      </div>
+      <div class="mb-2 small text-secondary">Advising FAQs</div>
+      <div
+        class="progress mb-3"
+        role="progressbar"
+        aria-label="Advising coverage"
+        aria-valuenow="70"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 70%">70%</div>
+      </div>
+      <div class="mb-2 small text-secondary">Husky Card FAQs</div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Husky Card coverage"
+        aria-valuenow="60"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 60%">60%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Isha's Part: FAQ + Newsletter + Footer + Modal + Toast ====================== -->
+<section id="faq" class="section section-muted border-top border-bottom">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">FAQ</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q1"
+                aria-expanded="true"
+                aria-controls="q1"
+              >
+                Who can use HUSKY AI?
+              </button>
+            </h2>
+            <div
+              id="q1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Students with a <strong>@northeastern.edu</strong> email. Login is
+                required on the sign-in page.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q2"
+                aria-expanded="false"
+                aria-controls="q2"
+              >
+                Is the information official?
+              </button>
+            </h2>
+            <div
+              id="q2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes — answers summarize official NU pages and include links so you
+                can verify details.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q3"
+                aria-expanded="false"
+                aria-controls="q3"
+              >
+                What if HUSKY AI doesn’t know?
+              </button>
+            </h2>
+            <div
+              id="q3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                It will say so and point you to the right office or official page.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="p-4 rounded-4 bg-white shadow-sm">
+          <h5 class="mb-3">Join the newsletter</h5>
+          <form id="newsletterForm" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-text" id="newsletterAddon">@</span>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="email@domain.com"
+                  aria-label="Email"
+                  aria-describedby="newsletterAddon"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-grid">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <small class="text-secondary d-block mt-2">
+            We’ll never share your email.
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="text-secondary">
+        © <span id="year"></span> HUSKY AI. All rights reserved.
+      </div>
+      <div class="d-flex gap-3">
+        <a
+          href="#"
+          class="btn btn-outline-secondary btn-sm rounded-circle"
+          data-bs-toggle="tooltip"
+          data-bs-title="Twitter / X"
+        >
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a
+          href="#"
+          class="btn btn-outline-secondary btn-sm rounded-circle"
+          data-bs-toggle="tooltip"
+          data-bs-title="GitHub"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="#"
+          class="btn btn-outline-secondary btn-sm rounded-circle"
+          data-bs-toggle="tooltip"
+          data-bs-title="LinkedIn"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div
+  class="modal fade"
+  id="demoModal"
+  tabindex="-1"
+  aria-labelledby="demoModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="demoModalLabel">Book a live demo</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 needs-validation" novalidate id="demoForm">
+          <div class="col-12">
+            <label for="demoName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="demoName" required />
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="col-md-8">
+            <label for="demoEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="demoEmail" required />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="demoSlot" class="form-label">Preferred Slot</label>
+            <select id="demoSlot" class="form-select" required>
+              <option value="">Choose...</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+            <div class="invalid-feedback">Please select a time.</div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div
+    id="globalToast"
+    class="toast align-items-center text-bg-success border-0"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="d-flex">
+      <div class="toast-body">Success! Your action completed.</div>
+      <button
+        type="button"
+        class="btn-close btn-close-white me-2 m-auto"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+</div>

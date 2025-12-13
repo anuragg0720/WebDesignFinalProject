@@ -1,0 +1,113 @@
+<main class="login-shell">
+  <div class="husky-logo-hero text-center pt-4 pb-2">
+    <img src="assets/img/husky01.png" alt="Husky logo" class="husky-logo-img" />
+  </div>
+  <!-- <div class="container d-flex justify-content-center align-items-center min-vh-100"> -->
+    <div class="container login-container d-flex justify-content-center align-items-start">
+
+    <div class="card login-card shadow-sm rounded-4 overflow-hidden">
+      <div class="row g-0">
+        <!-- Left: welcome + branding -->
+        <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-start bg-husky px-4 text-white">
+          <h1 class="h3 fw-bold mb-2">
+            Welcome to Husky AI
+          </h1>
+          <p class="mb-3 small">
+            Your Northeastern assistant for quick answers about programs, services, and campus life.
+          </p>
+          <ul class="small mb-0 ps-3">
+            <li>Ask questions about tuition, advising, and Husky Card.</li>
+            <li>Jump into curated links for NU services.</li>
+            <li>Different views for students, faculty, and admins.</li>
+          </ul>
+        </div>
+
+        <!-- Right: login form -->
+        <div class="col-lg-6 p-4">
+          <h2 class="h4 fw-bold mb-2">Sign in</h2>
+          <p class="text-secondary small mb-3">
+            Use your registered Northeastern email to continue.
+          </p>
+
+          <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+            <div class="mb-3">
+              <label for="email" class="form-label small">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                [(ngModel)]="email"
+                #emailCtrl="ngModel"
+                placeholder="you@northeastern.edu"
+                pattern="^[a-zA-Z0-9._%+-]+@northeastern\.edu$"
+                required
+              />
+              <div class="form-text small">
+                Use your official @northeastern.edu email.
+              </div>
+              <div
+                class="text-danger small mt-1"
+                *ngIf="emailCtrl.invalid && emailCtrl.touched"
+              >
+                Please enter a valid @northeastern.edu email address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label small">Password</label>
+              <div class="input-group">
+                <input
+                  [type]="showPassword ? 'text' : 'password'"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  [(ngModel)]="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  (click)="showPassword = !showPassword"
+                  [attr.aria-pressed]="showPassword"
+                >
+                  <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+                </button>
+              </div>
+            </div>
+
+            <div *ngIf="error" class="alert alert-danger py-2 small" role="alert">
+              {{ error }}
+            </div>
+
+
+
+            <div class="d-grid">
+              <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="loading || !loginForm.form.valid"
+              >
+                <span *ngIf="!loading">Sign in</span>
+                <span *ngIf="loading">
+                  <span
+                    class="spinner-border spinner-border-sm me-2"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Signing in…
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <p class="small text-secondary mt-3 mb-0">
+            New student?
+            <a routerLink="/signup" class="fw-semibold">Create a Husky AI account</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
